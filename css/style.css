@@ -1,13 +1,25 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     outline: none;
 }
 
-.game-title {
+body {
+    width: 99vw;
+    height: 98vh;
+    background: url(../assets/images/fons.png) center center/cover no-repeat;
+}
+
+span {
     display: block;
-    margin-bottom: 30px;
-    font-size: 35px;
+
+    margin: 2rem 0 2rem 0;
+
+    font-family: "BebasNeueRegular", sans-serif;
+    font-size: 5rem;
     font-weight: bold;
+
     text-align: center;
 }
 
@@ -15,45 +27,59 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 152px;
-    margin: 0 auto 50px;
-    border: 1px solid #000
+
+    width: 31rem;
+    margin: 0 auto;
+
+    border: 8px solid #000;
 }
 
 .game-item {
     position: relative;
-    width: 50px;
-    height: 50px;
-    line-height: 48px;
-    border: 1px solid #000;
+
+    width: 10rem;
+    height: 10rem;
+
+    border: 8px solid #000;
+
     text-align: center;
-    font-size: 30px;
+
+    font-family: "BebasNeueRegular", sans-serif;
+    font-size: 9rem;
     font-weight: bold;
-    transition: all linear .3s;
+
+    transition: all linear 0.3s;
 }
 
 .game-item.o {
-    background-color:#abfdab
+    background-color: #abfdab;
 }
 .game-item.x {
-    background-color:#f99
+    background-color: #f99;
 }
 
 .game-item:hover {
     background-color: #ccc;
 }
 
-#reset-game {
+button {
     display: block;
-    margin: 0 auto;
-    border: 1px solid #000;
-    border-radius: 20px;
-    background-color: #fff;
-    padding: 10px 20px;
+
+    font-family: "BebasNeueRegular", sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+
+    background-color: #000000;
+    border-radius: 5px;
+    border: 5px solid #000000;
+
+    padding: 5px 15px;
+    margin: 1.5rem auto 0 auto;
+
     cursor: pointer;
-    transition: all linear .3s;
+    transition: all linear 0.3s;
 }
 
-#reset-game:hover {
+button:hover {
     background-color: red;
 }

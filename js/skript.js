@@ -1,6 +1,6 @@
-var ceil = document.getElementsByClassName("game-item"),
-  reset = document.getElementById("reset-game"),
-  message = document.getElementById("massage"),
+var ceil = document.querySelectorAll(".game-item"),
+  reset = document.querySelector("#reset-game"),
+  message = document.querySelector("#massage"),
   player = "X",
   stepCount = 0,
   winCombinations = [
@@ -11,7 +11,7 @@ var ceil = document.getElementsByClassName("game-item"),
     [3, 6, 9],
     [3, 5, 7],
     [4, 5, 6],
-    [7, 8, 9]
+    [7, 8, 9],
   ],
   dataX = [],
   dataO = [];
@@ -48,7 +48,7 @@ function changePlayer() {
   player === "X" ? (player = "O") : (player = "X");
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   for (var i = 0; i < ceil.length; i++) {
     ceil[i].innerText = "";
   }
@@ -57,7 +57,7 @@ reset.addEventListener("click", function() {
   player = "O";
   stepCount = 0;
   message.textContent = "Ходит игрок " + player;
-  for (var i = 0; i < ceil.length; i++) {
+  for (let i = 0; i < ceil.length; i++) {
     ceil[i].addEventListener("click", currentStep);
     ceil[i].classList.remove("x", "o");
   }
